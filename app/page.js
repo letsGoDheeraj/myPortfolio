@@ -2,9 +2,6 @@ import Image from "next/image";
 import profle from "@/public/profile.png";
 import Link from "next/link";
 
-import Blog from "./_components/Blogs";
-import Clients from "./_components/Clients";
-import Testimonial from "./_components/Testimonial";
 import ContactForm from "./_components/ContactForm";
 import Portfolio from "./_components/Portfolio";
 
@@ -29,37 +26,34 @@ export default function Home() {
         <div className="container mx-auto mb-32">
           <div className="flex flex-col lg:flex-row lg:gap-x-32">
             <div className="lg:w-3/5 grid content-between">
-              <div className="lg:mb-32">
+              <div className="lg:mb-16">
                 <h1 className="text-gray-900 font-semibold text-5xl lg:text-7xl">
                   Hello, I&apos;m
                   <br />
-                  Khurram Shafeeq
+                  Dheeraj R P
                 </h1>
                 <div className="text-lg text-gray-600 my-6">
-                  I&apos;m a Freelance UI/UX Developer based in Islamabad,
-                  Pakistan. I strives to build immersive and beautiful web
-                  applications through carefully crafted code and user-centric
-                  design.
+                  Technology has always felt a little magical to me. What began as curiosity about how software works evolved into a passion for building it—and eventually into my profession. From software engineering to AI, I enjoy solving complex problems, exploring emerging technologies, and turning ideas into meaningful projects. Along the way, I love connecting with people from different cultures and perspectives, exploring new ideas, and gaining fresh insights that inspire both my work and personal growth.
                 </div>
                 <Link
-                  href="#"
-                  className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
+                  href="#contact"
+                  className="p-button bg-primary-500 hover:bg-primary-600:300 border-primary-500 hover:border-primary-600 font-bold no-underline"
                 >
-                  Say Hello!
+                  Let&apos;s Connect!
                 </Link>
               </div>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 my-4 lg:my-0">
-                <div className="flex justify-center flex-col items-center gap-y-2 p-6 bg-[#edd8ff80]">
-                  <div className="font-semibold text-2xl">15 Y.</div>
-                  <div className="">Experience</div>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 mt-2 lg:mt-0">
+                <div className="flex justify-center flex-col items-center gap-y-2 p-6 bg-[#edd8ff80] text-gray-700">
+                  <div className="font-semibold text-2xl text-gray-900">2.5 years</div>
+                  <div> Of Experience</div>
                 </div>
-                <div className="flex justify-center flex-col items-center gap-y-2 p-6 bg-[#edd8ff80]">
-                  <div className="font-semibold text-2xl">50+</div>
-                  <div className="">Project Completed</div>
+                <div className="flex justify-center flex-col items-center gap-y-2 p-6 bg-[#edd8ff80] text-gray-700">
+                  <div className="font-semibold text-2xl text-gray-900">Bengaluru, India</div>
+                  <div>Currently Based In</div>
                 </div>
-                <div className="flex justify-center flex-col items-center gap-y-2 p-6 bg-[#edd8ff80]">
-                  <div className="font-semibold text-2xl">5</div>
-                  <div className="">Happy Client</div>
+                <div className="flex justify-center flex-col items-center gap-y-2 p-6 bg-[#edd8ff80] text-gray-700">
+                  <div className="font-semibold text-2xl text-gray-900">Open to Work</div>
+                  <div>Seeking New Opportunities</div>
                 </div>
               </div>
             </div>
@@ -88,34 +82,36 @@ export default function Home() {
                 />
                 <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-9 flex gap-1 bg-white w-auto mx-auto  p-3 rounded shadow-[0_12px_64px_0_rgba(28,25,25,0.12)]">
                   <Link
-                    href="#"
+                    href="https://github.com/yourusername"
+                    target="_blank"
+                    title="GitHub"
                     className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500"
                   >
-                    <i className="pi pi-facebook group-hover:text-white text-primary-500  text-2xl leading-none"></i>
+                    <i className="pi pi-github group-hover:text-white text-primary-500  text-2xl leading-none"></i>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://linkedin.com/in/yourusername"
+                    target="_blank"
+                    title="LinkedIn"
                     className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500 "
                   >
                     <i className="pi pi-linkedin group-hover:text-white text-primary-500  text-2xl leading-none"></i>
                   </Link>
                   <Link
-                    href="#"
-                    className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500 "
-                  >
-                    <i className="pi pi-instagram group-hover:text-white text-primary-500  text-2xl leading-none"></i>
-                  </Link>
-                  <Link
-                    href="#"
+                    href="https://twitter.com/yourusername"
+                    target="_blank"
+                    title="Twitter"
                     className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500 "
                   >
                     <i className="pi pi-twitter group-hover:text-white text-primary-500  text-2xl leading-none"></i>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://instagram.com/yourusername"
+                    target="_blank"
+                    title="Instagram"
                     className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500 "
                   >
-                    <i className="pi pi-pinterest group-hover:text-white text-primary-500  text-2xl leading-none"></i>
+                    <i className="pi pi-instagram group-hover:text-white text-primary-500  text-2xl leading-none"></i>
                   </Link>
                 </div>
               </div>
@@ -123,33 +119,34 @@ export default function Home() {
             <div className="lg:w-3/5 grid mt-16 lg:mt-0">
               <div>
                 <h1 className="text-gray-900 font-semibold text-4xl">
-                  I am Professional User Experience Developer
+                  Software Engineer & Full-Stack Developer
                 </h1>
                 <div className="text-lg text-gray-600 my-6">
                   <p className="mb-3">
-                    I develop services for customers specializing creating
-                    stylish, modern websites, web services and online stores. My
-                    passion is to develop digital user experiences.
+                    I build scalable, user-focused web applications and digital products.
+                    My expertise spans frontend technologies, backend systems, and cloud
+                    architecture, with a passion for turning complex problems into elegant solutions.
                   </p>
                   <p>
-                    I develop services for customers specializing creating
-                    stylish, modern websites, web services.
+                    Whether it&apos;s building APIs, designing responsive interfaces, or
+                    optimizing performance, I bring a developer&apos;s mindset to every project.
                   </p>
                 </div>
                 <div className="flex flex-col lg:flex-row items-center gap-6">
                   <Link
-                    href="#"
+                    href="#portfolio"
                     className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
                   >
-                    My Projects
+                    View My Projects
                   </Link>
-                  <Link
-                    href="#"
+                  <a
+                    href="/resume.pdf"
+                    download
                     className="p-button p-button-outlined text-primary-500 font-bold no-underline"
                   >
                     <ArrowDownTrayIcon className="size-6 text-primary-500 mr-3" />
                     Download CV
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -254,10 +251,10 @@ export default function Home() {
           <Portfolio />
           <div className="mt-12 text-center">
             <Link
-              href="#"
+              href="/projects"
               className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
             >
-              More Projects
+              View All Projects
             </Link>
           </div>
         </div>
@@ -276,7 +273,7 @@ export default function Home() {
           </div>
           <div className="mt-12 text-center">
             <Link
-              href="#"
+              href="#contact"
               className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
             >
               <span className="inline-block mr-3"> Let’s work Together</span>
@@ -285,104 +282,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div
-        className="py-10 lg:py-24 bg-gradient-to-bl from-[#E5F8F7] via-[#fff] to-[#EADFF8]"
-        id="blogs"
-      >
-        <div className="container mx-auto">
-          <h2 className="text-gray-900 font-semibold text-4xl lg:text-5xl mb-6 text-center">
-            Blogs
-          </h2>
-          <div className="text-gray-400 text-center text-lg w-full lg:w-1/2 mx-auto">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration.
-          </div>
-          <div className="mt-16">
-            <Blog />
-          </div>
-        </div>
-      </div>
-      <div className="py-10 lg:py-24 bg-gray-50" id="services">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-32 items-center">
-            <div>
-              <h3 className="text-gray-950 text-4xl lg:text-5xl font-semibold">
-                What I do?
-              </h3>
-              <div className="text-gray-400 text-lg mt-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                purus arcu, varius eget velit non, laoreet imperdiet orci.
-                Mauris ultrices eget lorem ac vestibulum. Suspendis imperdiet,
-              </div>
-              <div className="text-gray-400 text-lg mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                purus arcu, varius eget velit non.
-              </div>
 
-              <Link
-                href="#"
-                className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline mt-12"
-              >
-                Say Hello!
-              </Link>
-            </div>
-            <div className="flex flex-col gap-6">
-              <div className="bg-white rounded-md border-0 border-white hover:border-primary-500 hover:shadow-[0_32px_96px_0_rgba(28,25,25,0.16)] border-l-4 border-solid p-8">
-                <h3>User Experience (UX)</h3>
-                <div className="text-gray-700 mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  purus arcu, varius eget velit non, laoreet imperdiet orci.
-                  Mauris ultrices eget lorem ac vestibulum.
-                </div>
-              </div>
-              <div className="bg-white rounded-md border-0 border-white hover:border-primary-500 hover:shadow-[0_32px_96px_0_rgba(28,25,25,0.16)] border-l-4 border-solid p-8">
-                <h3>User Interface (UI)</h3>
-                <div className="text-gray-700 mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  purus arcu, varius eget velit non, laoreet imperdiet orci.
-                  Mauris ultrices eget lorem ac vestibulum.
-                </div>
-              </div>
-              <div className="bg-white rounded-md border-0 border-white hover:border-primary-500 hover:shadow-[0_32px_96px_0_rgba(28,25,25,0.16)] border-l-4 border-solid p-8">
-                <h3>Web Development</h3>
-                <div className="text-gray-700 mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  purus arcu, varius eget velit non, laoreet imperdiet orci.
-                  Mauris ultrices eget lorem ac vestibulum.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="pt-10 lg:pt-24 pb-10 lg:pb-12">
-        <div className="container mx-auto">
-          <h2 className="text-gray-900 font-semibold text-4xl lg:text-5xl mb-6 text-center">
-            Happy Clients
-          </h2>
-          <div className="text-gray-400 text-center text-lg w-full lg:w-1/2 mx-auto">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration.
-          </div>
-          <div>
-            <Clients />
-          </div>
-        </div>
-      </div>
-      <div className="lg:pt-12 pb-10 lg:pb-24">
-        <div className="container mx-auto">
-          <h2 className="text-gray-900 font-semibold text-4xl lg:text-5xl mb-6 text-center">
-            Testimonial
-          </h2>
-          <div className="text-gray-400 text-center text-lg w-full lg:w-1/2 mx-auto">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration.
-          </div>
-          <div className="mt-16">
-            <Testimonial />
-          </div>
-        </div>
-      </div>
+
       <div className="container mx-auto" id="contact">
         <div className="p-8 lg:p-20 bg-white rounded-2xl shadow-[0_59px_124px_0_rgba(0,0,0,0.12)] relative z-10 -mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-32 items-center">

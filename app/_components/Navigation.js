@@ -12,8 +12,8 @@ export default function Page() {
     setIsOpen(false);
   };
   return (
-    <nav>
-      <div className="hidden lg:flex lg:items-center lg:gap-x-12">
+    <nav className="w-full">
+      <div className="hidden lg:flex lg:w-full lg:items-center lg:gap-x-12">
         <Link href="#home" className="no-underline text-gray-950">
           Home
         </Link>
@@ -32,6 +32,7 @@ export default function Page() {
         <Link href="#services" className="no-underline text-gray-950">
           Services
         </Link>
+        <div className="flex-1"></div>
         <Link
           href="#contact"
           className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"

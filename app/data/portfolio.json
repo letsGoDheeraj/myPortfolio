@@ -1,0 +1,31 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Project Name 1",
+      "description": "Brief description of your first project. Describe the problem solved and technologies used.",
+      "image": "portfolio-1.jpg",
+      "technologies": ["React", "Node.js", "MongoDB"],
+      "link": "https://github.com/yourusername/project1",
+      "liveDemo": "https://project1.example.com"
+    },
+    {
+      "id": 2,
+      "title": "Project Name 2",
+      "description": "Brief description of your second project. Describe the problem solved and technologies used.",
+      "image": "portfolio-2.jpg",
+      "technologies": ["Next.js", "Tailwind", "Firebase"],
+      "link": "https://github.com/yourusername/project2",
+      "liveDemo": "https://project2.example.com"
+    },
+    {
+      "id": 3,
+      "title": "Project Name 3",
+      "description": "Brief description of your third project. Describe the problem solved and technologies used.",
+      "image": "portfolio-3.jpg",
+      "technologies": ["Vue.js", "Express", "PostgreSQL"],
+      "link": "https://github.com/yourusername/project3",
+      "liveDemo": "https://project3.example.com"
+    }
+  ]
+}
