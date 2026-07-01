@@ -23,8 +23,8 @@ export default function Page() {
         <Link href="#process" className="no-underline text-gray-950">
           Process
         </Link>
-        <Link href="#portfolio" className="no-underline text-gray-950">
-          Portfolio
+        <Link href="#projects" className="no-underline text-gray-950">
+          Projects
         </Link>
         <Link href="#blogs" className="no-underline text-gray-950">
           Blogs
@@ -62,8 +62,8 @@ export default function Page() {
         <Link href="#process" className="no-underline p-2 text-gray-950">
           Process
         </Link>
-        <Link href="#portfolio" className="no-underline p-2 text-gray-950">
-          Portfolio
+        <Link href="#projects" className="no-underline p-2 text-gray-950">
+          Projects
         </Link>
         <Link href="#blogs" className="no-underline p-2 text-gray-950">
           Blog

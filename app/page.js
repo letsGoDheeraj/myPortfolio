@@ -3,7 +3,8 @@ import profle from "@/public/profile.png";
 import Link from "next/link";
 
 import ContactForm from "./_components/ContactForm";
-import Portfolio from "./_components/Portfolio";
+import Projects from "./_components/Projects";
+import Certifications from "./_components/Certifications";
 
 import { Button } from "primereact/button";
 
@@ -134,7 +135,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col lg:flex-row items-center gap-6">
                   <Link
-                    href="#portfolio"
+                    href="#projects"
                     className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
                   >
                     View My Projects
@@ -236,19 +237,20 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="py-10 lg:py-24 bg-white" id="portfolio">
+      <div className="py-10 lg:py-24 bg-white" id="projects">
         <div className="container mx-auto">
           <h2 className="text-gray-900 font-semibold text-4xl lg:text-5xl mb-6 text-center">
-            Portfolio
+            Projects
           </h2>
           <div className="text-gray-400 text-center text-lg lg:w-1/2 mx-auto">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris
-              ultrices eget lorem ac vestibulum. Suspendis imperdiet,
+              Explore a selection of my work and projects. Each project
+              showcases my expertise in design, development, and problem-solving.
+              Click on any project to see detailed case studies and learn about
+              the solutions I've implemented.
             </p>
           </div>
-          <Portfolio />
+          <Projects />
           <div className="mt-12 text-center">
             <Link
               href="/projects"
@@ -260,15 +262,30 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="py-10 lg:py-24 bg-gray-50" id="certifications">
+        <div className="container mx-auto">
+          <h2 className="text-gray-900 font-semibold text-4xl lg:text-5xl mb-6 text-center">
+            Certifications
+          </h2>
+          <div className="text-gray-400 text-center text-lg lg:w-1/2 mx-auto">
+            <p>
+              A collection of professional certifications that validate my expertise
+              across cloud platforms, development practices, and technology domains.
+            </p>
+          </div>
+          <Certifications />
+        </div>
+      </div>
+
       <div className="py-10 lg:py-24 bg-gray-900">
         <div className="container mx-auto">
           <h2 className="text-white font-semibold text-4xl lg:text-5xl mb-6 text-center w-full lg:w-1/2 mx-auto">
-            Do you have Project Idia? Let&apos;s discuss your project!
+            If you&apos;d like to get in touch, let&apos;s connect.
           </h2>
           <div className="text-gray-300 text-center text-lg w-full lg:w-1/2 mx-auto">
             <p>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration.
+              Whether it&apos;s a role, collaboration, or a quick conversation,
+              feel free to reach out. I&apos;d be happy to connect.
             </p>
           </div>
           <div className="mt-12 text-center">
@@ -276,7 +293,7 @@ export default function Home() {
               href="#contact"
               className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
             >
-              <span className="inline-block mr-3"> Let’s work Together</span>
+              <span className="inline-block mr-3"> Let&apos;s Connect</span>
               <ArrowRightIcon className="size-6 text-white" />
             </Link>
           </div>
@@ -289,11 +306,11 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-32 items-center">
             <div>
               <h3 className="text-gray-900 text-4xl font-semibold">
-                Let’s discuss your Project
+                Let&apos;s connect
               </h3>
               <div className="text-gray-400 text-lg mt-4 mb-4 lg:mb-0">
-                There are many variations of passages of Lorem Ipsu available.
-                but the majority have suffered alte.
+                If you&apos;d like to get in touch, you can reach out here. I&apos;m
+                always open to meaningful conversations and new ideas.
               </div>
               <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-3 group hover:bg-white rounded-lg hover:border-primary-500 hover:shadow-[0_12px_64px_0_rgba(28,25,25,0.12)] p-6 lg:w-4/5">
