@@ -5,16 +5,13 @@ import Link from "next/link";
 import ContactForm from "./_components/ContactForm";
 import Projects from "./_components/Projects";
 import Certifications from "./_components/Certifications";
+import AboutMeSections from "./_components/AboutMeSections";
 
 import { Button } from "primereact/button";
 
 import {
   ArrowDownTrayIcon,
   ArrowRightIcon,
-  CodeBracketSquareIcon,
-  NewspaperIcon,
-  PencilSquareIcon,
-  PresentationChartLineIcon,
 } from "@heroicons/react/24/solid";
 
 export default function Home() {
@@ -154,92 +151,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-gray-50 pb-10 lg:pb-36 pt-24 lg:pt-52" id="process">
-        <div className="container mx-auto">
-          <div className="flex items-center flex-col lg:flex-row lg:gap-x-32">
-            <div className="lg:w-1/2">
-              <div className="">
-                <h2 className="text-gray-900 font-semibold text-4xl lg:text-5xl mb-6">
-                  Work Process
-                </h2>
-                <div className="text-gray-500 text-lg">
-                  <p className="mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nulla purus arcu, varius eget velit non, laoreet imperdiet
-                    orci. Mauris ultrices eget lorem ac vestibulum. Suspendis
-                    imperdiet,
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nulla purus arcu, varius eget velit non.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-1/2 flex flex-col lg:flex-row gap-6">
-              <div className="lg:w-1/2">
-                <div className="flex flex-col gap-6 mt-8 lg:-mt-6">
-                  <div className="bg-white p-8 rounded-xl group hover:shadow-[32px_32px_124px_0_rgba(43,56,76,0.10)]">
-                    <div className="w-16 h-16 p-5 rounded-md bg-[#edd8ff80] group-hover:bg-primary-500 mb-8">
-                      <NewspaperIcon className="size-6 text-primary-500 group-hover:text-white" />
-                    </div>
-                    <div className="text-xl font-semibold text-gray-900 mb-3">
-                      1. Research
-                    </div>
-                    <p className="text-gray-600">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nulla purus arcu.
-                    </p>
-                  </div>
-                  <div className="bg-white p-8 rounded-xl group hover:shadow-[32px_32px_124px_0_rgba(43,56,76,0.10)]">
-                    <div className="w-16 h-16 p-5 rounded-md bg-[#edd8ff80] group-hover:bg-primary-500 mb-8">
-                      <CodeBracketSquareIcon className="size-6 text-primary-500 group-hover:text-white" />
-                    </div>
-                    <div className="text-xl font-semibold text-gray-900 mb-3">
-                      2. Analyze
-                    </div>
-                    <p className="text-gray-600">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nulla purus arcu.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="lg:w-1/2">
-                <div className="flex flex-col gap-6">
-                  <div className="bg-white p-8 rounded-xl group hover:shadow-[32px_32px_124px_0_rgba(43,56,76,0.10)]">
-                    <div className="w-16 h-16 p-5 rounded-md bg-[#edd8ff80] group-hover:bg-primary-500 mb-8">
-                      <PencilSquareIcon className="size-6 text-primary-500 group-hover:text-white" />
-                    </div>
-                    <div className="text-xl font-semibold text-gray-900 mb-3">
-                      3. Design
-                    </div>
-                    <p className="text-gray-600">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nulla purus arcu.
-                    </p>
-                  </div>
-                  <div className="bg-white p-8 rounded-xl group hover:shadow-[32px_32px_124px_0_rgba(43,56,76,0.10)]">
-                    <div className="w-16 h-16 p-5 rounded-md bg-[#edd8ff80] group-hover:bg-primary-500 mb-8">
-                      <PresentationChartLineIcon className="size-6 text-primary-500 group-hover:text-white" />
-                    </div>
-                    <div className="text-xl font-semibold text-gray-900 mb-3">
-                      4. Launch
-                    </div>
-                    <p className="text-gray-600">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nulla purus arcu.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="py-10 lg:py-24 bg-white" id="projects">
         <div className="container mx-auto">
-          <h2 className="text-gray-900 font-semibold text-4xl lg:text-5xl mb-6 text-center">
+          <h2 className="text-gray-900 font-semibold text-4xl lg:text-5xl mb-6 text-center mt-8 lg:mt-12">
             Projects
           </h2>
           <div className="text-gray-400 text-center text-lg lg:w-1/2 mx-auto">
@@ -274,6 +188,21 @@ export default function Home() {
             </p>
           </div>
           <Certifications />
+        </div>
+      </div>
+
+      <div className="py-10 lg:py-24 bg-white" id="about-me">
+        <div className="container mx-auto">
+          <h2 className="text-gray-900 font-semibold text-4xl lg:text-5xl mb-6 text-center">
+            About Me
+          </h2>
+          <div className="text-gray-400 text-center text-lg lg:w-1/2 mx-auto">
+            <p>
+              A few personal stories and interests that shape how I think,
+              build, and live.
+            </p>
+          </div>
+          <AboutMeSections />
         </div>
       </div>
 
