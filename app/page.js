@@ -33,12 +33,14 @@ export default function Home() {
                 <div className="text-lg text-gray-600 my-6">
                   Technology has always felt a little magical to me. What began as curiosity about how software works evolved into a passion for building it—and eventually into my profession. From software engineering to AI, I enjoy solving complex problems, exploring emerging technologies, and turning ideas into meaningful projects. Along the way, I love connecting with people from different cultures and perspectives, exploring new ideas, and gaining fresh insights that inspire both my work and personal growth.
                 </div>
-                <Link
-                  href="#contact"
-                  className="p-button bg-primary-500 hover:bg-primary-600:300 border-primary-500 hover:border-primary-600 font-bold no-underline"
+                <a
+                  href="/resume.pdf"
+                  download
+                  className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
                 >
-                  Let&apos;s Connect!
-                </Link>
+                  <ArrowDownTrayIcon className="size-6 text-white mr-3" />
+                  Download CV
+                </a>
               </div>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 mt-2 lg:mt-0">
                 <div className="flex justify-center flex-col items-center gap-y-2 p-6 bg-[#edd8ff80] text-gray-700">
@@ -140,9 +142,9 @@ export default function Home() {
                   <a
                     href="/resume.pdf"
                     download
-                    className="p-button p-button-outlined text-primary-500 font-bold no-underline"
+                    className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
                   >
-                    <ArrowDownTrayIcon className="size-6 text-primary-500 mr-3" />
+                    <ArrowDownTrayIcon className="size-6 text-white mr-3" />
                     Download CV
                   </a>
                 </div>

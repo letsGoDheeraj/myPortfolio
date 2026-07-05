@@ -37,7 +37,7 @@ export default function Page() {
           href="#contact"
           className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
         >
-          Contact
+          Let&apos;s Connect
         </Link>
       </div>
       <div onClick={toggleMenu} className="lg:hidden">
@@ -72,7 +72,7 @@ export default function Page() {
           Services
         </Link>
         <Link href="#contact" className="no-underline p-2 text-gray-950">
-          Contact
+          Let&apos;s Connect
         </Link>
       </div>
     </nav>
