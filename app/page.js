@@ -7,11 +7,8 @@ import Projects from "./_components/Projects";
 import Certifications from "./_components/Certifications";
 import AboutMeSections from "./_components/AboutMeSections";
 
-import { Button } from "primereact/button";
-
 import {
   ArrowDownTrayIcon,
-  ArrowRightIcon,
 } from "@heroicons/react/24/solid";
 
 export default function Home() {
@@ -21,7 +18,7 @@ export default function Home() {
         className="pt-12 lg:pt-32 bg-gradient-to-bl from-[#EADFF8] via-[#fff] to-[#E5F8F7]"
         id="home"
       >
-        <div className="container mx-auto mb-32">
+        <div className="container mx-auto pb-32">
           <div className="flex flex-col lg:flex-row lg:gap-x-32">
             <div className="lg:w-3/5 grid content-between">
               <div className="lg:mb-16">
@@ -68,87 +65,42 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div
-          className="container mx-auto bg-white rounded-2xl shadow-[0_36px_105px_0_rgba(43,56,76,0.10)] relative -mb-16"
-          id="about"
-        >
-          <div className="flex items-center flex-col lg:flex-row lg:gap-x-32 p-4 lg:p-28">
-            <div className="lg:w-2/5 flex justify-center items-center bg-[#F0F1F3]">
-              <div className="relative aspect-square flex flex-col justify-center max-h-[460px]">
-                <Image
-                  src={profle}
-                  alt="profile - Picto Free NextJS & Tailwindcss Template"
-                  className="object-contain h-full w-auto max-w-full"
-                />
-                <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-9 flex gap-1 bg-white w-auto mx-auto  p-3 rounded shadow-[0_12px_64px_0_rgba(28,25,25,0.12)]">
-                  <Link
-                    href="https://github.com/yourusername"
-                    target="_blank"
-                    title="GitHub"
-                    className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500"
-                  >
-                    <i className="pi pi-github group-hover:text-white text-primary-500  text-2xl leading-none"></i>
-                  </Link>
-                  <Link
-                    href="https://linkedin.com/in/yourusername"
-                    target="_blank"
-                    title="LinkedIn"
-                    className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500 "
-                  >
-                    <i className="pi pi-linkedin group-hover:text-white text-primary-500  text-2xl leading-none"></i>
-                  </Link>
-                  <Link
-                    href="https://twitter.com/yourusername"
-                    target="_blank"
-                    title="Twitter"
-                    className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500 "
-                  >
-                    <i className="pi pi-twitter group-hover:text-white text-primary-500  text-2xl leading-none"></i>
-                  </Link>
-                  <Link
-                    href="https://instagram.com/yourusername"
-                    target="_blank"
-                    title="Instagram"
-                    className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500 "
-                  >
-                    <i className="pi pi-instagram group-hover:text-white text-primary-500  text-2xl leading-none"></i>
-                  </Link>
-                </div>
-              </div>
+      </div>
+      <div className="py-10 lg:py-24 bg-gray-50" id="experience">
+        <div className="container mx-auto">
+          <h2 className="text-gray-900 font-semibold text-4xl lg:text-5xl mb-6 text-center">
+            Experience
+          </h2>
+          <div className="text-gray-500 text-center text-lg lg:w-1/2 mx-auto">
+            <p>
+              A snapshot of my professional journey across software engineering,
+              full-stack development, and AI-focused product delivery.
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="rounded-2xl bg-white p-8 shadow-[0_16px_48px_0_rgba(17,24,39,0.08)]">
+              <div className="text-primary-500 font-semibold mb-2">2024 - Present</div>
+              <h3 className="text-gray-900 text-2xl font-semibold mb-2">Software Engineer</h3>
+              <p className="text-gray-600">
+                Building scalable web applications, improving user experience,
+                and delivering production-ready features end-to-end.
+              </p>
             </div>
-            <div className="lg:w-3/5 grid mt-16 lg:mt-0">
-              <div>
-                <h1 className="text-gray-900 font-semibold text-4xl">
-                  Software Engineer & Full-Stack Developer
-                </h1>
-                <div className="text-lg text-gray-600 my-6">
-                  <p className="mb-3">
-                    I build scalable, user-focused web applications and digital products.
-                    My expertise spans frontend technologies, backend systems, and cloud
-                    architecture, with a passion for turning complex problems into elegant solutions.
-                  </p>
-                  <p>
-                    Whether it&apos;s building APIs, designing responsive interfaces, or
-                    optimizing performance, I bring a developer&apos;s mindset to every project.
-                  </p>
-                </div>
-                <div className="flex flex-col lg:flex-row items-center gap-6">
-                  <Link
-                    href="#projects"
-                    className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
-                  >
-                    View My Projects
-                  </Link>
-                  <a
-                    href="/resume.pdf"
-                    download
-                    className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
-                  >
-                    <ArrowDownTrayIcon className="size-6 text-white mr-3" />
-                    Download CV
-                  </a>
-                </div>
-              </div>
+            <div className="rounded-2xl bg-white p-8 shadow-[0_16px_48px_0_rgba(17,24,39,0.08)]">
+              <div className="text-primary-500 font-semibold mb-2">2023 - 2024</div>
+              <h3 className="text-gray-900 text-2xl font-semibold mb-2">Full-Stack Developer</h3>
+              <p className="text-gray-600">
+                Developed responsive frontends and robust APIs while focusing on
+                performance, maintainability, and clean architecture.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-white p-8 shadow-[0_16px_48px_0_rgba(17,24,39,0.08)]">
+              <div className="text-primary-500 font-semibold mb-2">2022 - 2023</div>
+              <h3 className="text-gray-900 text-2xl font-semibold mb-2">AI & Product Projects</h3>
+              <p className="text-gray-600">
+                Explored applied AI use cases and translated ideas into practical
+                product features with measurable impact.
+              </p>
             </div>
           </div>
         </div>
@@ -207,30 +159,6 @@ export default function Home() {
           <AboutMeSections />
         </div>
       </div>
-
-      <div className="py-10 lg:py-24 bg-gray-900">
-        <div className="container mx-auto">
-          <h2 className="text-white font-semibold text-4xl lg:text-5xl mb-6 text-center w-full lg:w-1/2 mx-auto">
-            If you&apos;d like to get in touch, let&apos;s connect.
-          </h2>
-          <div className="text-gray-300 text-center text-lg w-full lg:w-1/2 mx-auto">
-            <p>
-              Whether it&apos;s a role, collaboration, or a quick conversation,
-              feel free to reach out. I&apos;d be happy to connect.
-            </p>
-          </div>
-          <div className="mt-12 text-center">
-            <Link
-              href="#contact"
-              className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
-            >
-              <span className="inline-block mr-3"> Let&apos;s Connect</span>
-              <ArrowRightIcon className="size-6 text-white" />
-            </Link>
-          </div>
-        </div>
-      </div>
-
 
       <div className="container mx-auto" id="contact">
         <div className="p-8 lg:p-20 bg-white rounded-2xl shadow-[0_59px_124px_0_rgba(0,0,0,0.12)] relative z-10 -mb-12">

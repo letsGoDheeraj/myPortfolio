@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Page() {
   const navItems = [
     { href: "#home", label: "Home", sectionId: "home" },
+    { href: "#experience", label: "Experience", sectionId: "experience" },
     { href: "#projects", label: "Projects", sectionId: "projects" },
     {
       href: "#certifications",
