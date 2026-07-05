@@ -1,45 +1,130 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Page() {
+  const navItems = [
+    { href: "#home", label: "Home", sectionId: "home" },
+    { href: "#projects", label: "Projects", sectionId: "projects" },
+    {
+      href: "#certifications",
+      label: "Certifications",
+      sectionId: "certifications",
+    },
+    { href: "#about-me", label: "About Me", sectionId: "about-me" },
+    { href: "#contact", label: "Let's Connect", sectionId: "contact" },
+  ];
+
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const [indicatorStyle, setIndicatorStyle] = useState({
+    width: 0,
+    left: 0,
+    opacity: 0,
+  });
+  const itemRefs = useRef({});
+
+  useEffect(() => {
+    const sectionIds = navItems.map((item) => item.sectionId);
+
+    const updateActiveSection = () => {
+      const topOffset = 140;
+      const firstSection = document.getElementById(sectionIds[0]);
+
+      if (firstSection && window.scrollY < topOffset) {
+        setActiveSection((current) =>
+          current === sectionIds[0] ? current : sectionIds[0]
+        );
+        return;
+      }
+
+      const currentScroll = window.scrollY + topOffset;
+      let nextActive = sectionIds[0];
+
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section && currentScroll >= section.offsetTop) {
+          nextActive = id;
+        }
+      });
+
+      setActiveSection((current) =>
+        current === nextActive ? current : nextActive
+      );
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, []);
+
+  useEffect(() => {
+    const updateIndicator = () => {
+      const activeElement = itemRefs.current[activeSection];
+      if (!activeElement) return;
+
+      setIndicatorStyle({
+        width: activeElement.offsetWidth,
+        left: activeElement.offsetLeft,
+        opacity: 1,
+      });
+    };
+
+    updateIndicator();
+    window.addEventListener("resize", updateIndicator);
+
+    return () => {
+      window.removeEventListener("resize", updateIndicator);
+    };
+  }, [activeSection]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
   const closeMenu = () => {
     setIsOpen(false);
   };
+
   return (
     <nav className="w-full">
-      <div className="hidden lg:flex lg:w-full lg:items-center lg:gap-x-12">
-        <Link href="#home" className="no-underline text-gray-950">
-          Home
-        </Link>
-        <Link href="#about" className="no-underline text-gray-950">
-          About
-        </Link>
-        <Link href="#process" className="no-underline text-gray-950">
-          Process
-        </Link>
-        <Link href="#projects" className="no-underline text-gray-950">
-          Projects
-        </Link>
-        <Link href="#blogs" className="no-underline text-gray-950">
-          Blogs
-        </Link>
-        <Link href="#services" className="no-underline text-gray-950">
-          Services
-        </Link>
-        <div className="flex-1"></div>
-        <Link
-          href="#contact"
-          className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
-        >
-          Let&apos;s Connect
-        </Link>
+      <div className="hidden lg:block">
+        <div className="relative flex w-full items-center gap-1 rounded-full border border-primary-200 bg-white/95 p-2 shadow-sm backdrop-blur-sm">
+          <span
+            className="pointer-events-none absolute left-0 bottom-2 top-2 rounded-full bg-primary-500 transition-all duration-300 ease-out"
+            style={{
+              width: `${indicatorStyle.width}px`,
+              transform: `translateX(${indicatorStyle.left}px)`,
+              opacity: indicatorStyle.opacity,
+            }}
+          />
+
+          {navItems.map((item) => (
+            <Link
+              key={item.sectionId}
+              href={item.href}
+              ref={(node) => {
+                if (node) {
+                  itemRefs.current[item.sectionId] = node;
+                }
+              }}
+              className={`relative z-10 inline-flex items-center justify-center text-center no-underline rounded-full px-5 py-3 text-base font-semibold transition-colors duration-300 ${
+                activeSection === item.sectionId
+                  ? "text-white"
+                  : "text-gray-950 hover:text-primary-500"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
       </div>
+
       <div onClick={toggleMenu} className="lg:hidden">
         <i
           className={`pi ${
@@ -53,27 +138,19 @@ export default function Page() {
         }`}
         onClick={closeMenu}
       >
-        <Link href="/" className="no-underline p-2 text-gray-950">
-          Home
-        </Link>
-        <Link href="#about" className="no-underline p-2 text-gray-950">
-          About
-        </Link>
-        <Link href="#process" className="no-underline p-2 text-gray-950">
-          Process
-        </Link>
-        <Link href="#projects" className="no-underline p-2 text-gray-950">
-          Projects
-        </Link>
-        <Link href="#blogs" className="no-underline p-2 text-gray-950">
-          Blog
-        </Link>
-        <Link href="#services" className="no-underline p-2 text-gray-950">
-          Services
-        </Link>
-        <Link href="#contact" className="no-underline p-2 text-gray-950">
-          Let&apos;s Connect
-        </Link>
+        {navItems.map((item) => (
+          <Link
+            key={item.sectionId}
+            href={item.href}
+            className={`no-underline rounded-lg p-2 ${
+              activeSection === item.sectionId
+                ? "bg-primary-500 text-white"
+                : "text-gray-950"
+            }`}
+          >
+            {item.label}
+          </Link>
+        ))}
       </div>
     </nav>
   );
