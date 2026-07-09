@@ -12,6 +12,29 @@ import {
 } from "@heroicons/react/24/solid";
 
 export default function Home() {
+  const experiences = [
+    {
+      company: "Flexera",
+      designation: "Associate Software Engineer",
+      duration: "July 2024 – Present",
+      location: "Bengaluru, India",
+      responsibilities: [
+        "Built and enhanced SaaS connectors for 10+ enterprise SaaS vendors, including Microsoft 365, ServiceNow, Microsoft Entra ID, Salesforce, and DocuSign, enabling automated ingestion of subscription, usage, and user data for enterprise tenants with 100K+ users",
+        "Designed and developed a multi-purchase subscription and tier management system with RESTful APIs, currency conversion, and event-driven processing using Go, MongoDB, NATS, and OpenAPI.",
+        "Resolved critical production bugs in license management, delivering accurate subscription counts and clean data exports for enterprise customers.",
+      ],
+    },
+    {
+      company: "Subex",
+      designation: "Software Engineer Intern",
+      duration: "Jan 2024 – July 2024",
+      location: "Bengaluru, India",
+      responsibilities: [
+        "Automated CI/CD pipelines using Bash — covering branch management, Jenkins builds, Helm chart extraction, and ArgoCD deployments, cutting release effort by 70%.",
+      ],
+    },
+  ];
+
   return (
     <>
       <div
@@ -28,7 +51,14 @@ export default function Home() {
                   Dheeraj R P
                 </h1>
                 <div className="text-lg text-gray-600 my-6">
-                  Technology has always felt a little magical to me. What began as curiosity about how software works evolved into a passion for building it—and eventually into my profession. From software engineering to AI, I enjoy solving complex problems, exploring emerging technologies, and turning ideas into meaningful projects. Along the way, I love connecting with people from different cultures and perspectives, exploring new ideas, and gaining fresh insights that inspire both my work and personal growth.
+                  A passionate software engineer with expertise in 
+                  full-stack development. Currently working at Flexera, as an 
+                  Associate Software Engineer, I drive innovation through 
+                  building scalable web applications that solve real-world problems.
+                  With a B.Tech in Computer Science, I bring strong technical foundations 
+                  with hands-on experience in web development, cloud technologies, 
+                  and AI-driven solutions. Looking forward to contributing to impactful projects and collaborating with
+                  like-minded professionals in the tech community.
                 </div>
                 <a
                   href="/resume.pdf"
@@ -73,34 +103,37 @@ export default function Home() {
           </h2>
           <div className="text-gray-500 text-center text-lg lg:w-1/2 mx-auto">
             <p>
-              A snapshot of my professional journey across software engineering,
-              full-stack development, and AI-focused product delivery.
+              A snapshot of my professional journey across companies, technologies and roles that shaped me
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="rounded-2xl bg-white p-8 shadow-[0_16px_48px_0_rgba(17,24,39,0.08)]">
-              <div className="text-primary-500 font-semibold mb-2">2024 - Present</div>
-              <h3 className="text-gray-900 text-2xl font-semibold mb-2">Software Engineer</h3>
-              <p className="text-gray-600">
-                Building scalable web applications, improving user experience,
-                and delivering production-ready features end-to-end.
-              </p>
-            </div>
-            <div className="rounded-2xl bg-white p-8 shadow-[0_16px_48px_0_rgba(17,24,39,0.08)]">
-              <div className="text-primary-500 font-semibold mb-2">2023 - 2024</div>
-              <h3 className="text-gray-900 text-2xl font-semibold mb-2">Full-Stack Developer</h3>
-              <p className="text-gray-600">
-                Developed responsive frontends and robust APIs while focusing on
-                performance, maintainability, and clean architecture.
-              </p>
-            </div>
-            <div className="rounded-2xl bg-white p-8 shadow-[0_16px_48px_0_rgba(17,24,39,0.08)]">
-              <div className="text-primary-500 font-semibold mb-2">2022 - 2023</div>
-              <h3 className="text-gray-900 text-2xl font-semibold mb-2">AI & Product Projects</h3>
-              <p className="text-gray-600">
-                Explored applied AI use cases and translated ideas into practical
-                product features with measurable impact.
-              </p>
+          <div className="mt-12 relative">
+            <div className="absolute left-4 top-0 bottom-0 w-px bg-primary-200"></div>
+            <div className="space-y-8">
+              {experiences.map((experience) => (
+                <article key={experience.company} className="relative pl-12">
+                  <div className="rounded-2xl bg-white p-8 shadow-[0_16px_48px_0_rgba(17,24,39,0.08)]">
+                    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+                      <div>
+                        <h3 className="text-gray-900 text-2xl font-semibold">
+                          {experience.company}
+                        </h3>
+                        <p className="text-primary-500 font-semibold mt-1">
+                          {experience.designation}
+                        </p>
+                      </div>
+                      <div className="text-gray-500 text-sm lg:text-right">
+                        <div className="font-semibold">{experience.duration}</div>
+                        <div>{experience.location}</div>
+                      </div>
+                    </div>
+                    <ul className="mt-5 space-y-2 text-gray-600 list-disc list-inside">
+                      {experience.responsibilities.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </div>
