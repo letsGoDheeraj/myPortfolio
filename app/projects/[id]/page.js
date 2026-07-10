@@ -7,10 +7,10 @@ const projectsData = [
     id: 1,
     imageUrl: "portfolio-1.jpg",
     category: "AI AGENT",
-    title: "Automated News Post Creation Agent",
+    title: "Multi-Agent AI Release Notes Generator",
     description:
       "Built an AI-driven agent integrating Confluence, Jira, and GitHub custom agents to automate feature release note creation, reducing effort by 95%.",
-    fullDescription: `This project involved creating a sophisticated AI agent that seamlessly integrates with multiple tools including Confluence, Jira, and GitHub. The agent automatically generates feature release notes by analyzing code changes, documentation, and issue tracking data.
+    fullDescription: `Engineered a multi-agent AI system integrating Confluence, Jira, and GitHub to automate feature release documentation. The agents analyze requirements, documentation, and customer value to generate React UI code, create GitHub pull requests, and produce context-aware release notes.
 
 Key Features:
 - Automated extraction of release information from Jira and GitHub
@@ -166,72 +166,54 @@ export default async function ProjectDetail({ params }) {
       </div>
 
       {/* Hero Image */}
-      <div className="relative h-96 lg:h-[600px] bg-gray-200">
-        <Image
-          src={`/portfolio/${project.imageUrl}`}
-          fill
-          className="object-cover"
-          alt={project.title}
-          priority
-        />
-      </div>
+      
 
       {/* Content Section */}
       <div className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
-            {/* Main Content */}
-            <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8 whitespace-pre-line">
+
+          {/* Image + Overview side by side */}
+          <div className="flex flex-col lg:flex-row gap-10 mb-16">
+            <div className="relative shrink-0 w-full lg:w-[26rem] h-[26rem] rounded-2xl overflow-hidden bg-gray-200">
+              <Image
+                src={`/portfolio/${project.imageUrl}`}
+                fill
+                className="object-cover"
+                alt={project.title}
+                priority
+              />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Overview</h2>
+              <p className="text-lg text-gray-600 leading-relaxed whitespace-pre-line">
                 {project.fullDescription}
               </p>
-
-              {/* Challenge, Solution, Impact */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-12">
-                <div className="bg-purple-50 p-8 rounded-lg">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Challenge</h3>
-                  <p className="text-gray-600">{project.challenge}</p>
-                </div>
-                <div className="bg-purple-50 p-8 rounded-lg">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Solution</h3>
-                  <p className="text-gray-600">{project.solution}</p>
-                </div>
-              </div>
-
-              <div className="bg-purple-50 p-8 rounded-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Impact</h3>
-                <p className="text-gray-600">{project.impact}</p>
-              </div>
+              {project.link !== "#" && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-6 p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
+                >
+                  Visit Project
+                </a>
+              )}
             </div>
+          </div>
 
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-8 bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">Technologies</h3>
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Project Links</h3>
-                {project.link !== "#" && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline w-full"
-                  >
-                    Visit Project
-                  </a>
-                )}
-              </div>
+          {/* Challenge, Solution, Impact */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-purple-50 p-8 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Challenge</h3>
+              <p className="text-gray-600">{project.challenge}</p>
+            </div>
+            <div className="bg-purple-50 p-8 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Solution</h3>
+              <p className="text-gray-600">{project.solution}</p>
+            </div>
+            <div className="bg-purple-50 p-8 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Impact</h3>
+              <p className="text-gray-600">{project.impact}</p>
             </div>
           </div>
 
