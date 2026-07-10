@@ -21,7 +21,8 @@ export default function Home() {
       responsibilities: [
         "Built and enhanced SaaS connectors for 10+ enterprise SaaS vendors, including Microsoft 365, ServiceNow, Microsoft Entra ID, Salesforce, and DocuSign, enabling automated ingestion of subscription, usage, and user data for enterprise tenants with 100K+ users",
         "Designed and developed a multi-purchase subscription and tier management system with RESTful APIs, currency conversion, and event-driven processing using Go, MongoDB, NATS, and OpenAPI.",
-        "Resolved critical production bugs in license management, delivering accurate subscription counts and clean data exports for enterprise customers.",
+        "Implemented certificate-based authentication for Microsoft 365, Microsoft Entra ID, and Microsoft Defender connectors, enabling secure, keyless authentication for enterprise integrations.",
+        "Diagnosed and resolved critical production incidents by performing root cause analysis, fixing large-scale data ingestion failures, correcting subscription count discrepancies, remediating PII exposure in API queries, and implementing resilient retry mechanisms for transient API failures.",
       ],
     },
     {
@@ -30,7 +31,7 @@ export default function Home() {
       duration: "Jan 2024 – July 2024",
       location: "Bengaluru, India",
       responsibilities: [
-        "Automated CI/CD pipelines using Bash — covering branch management, Jenkins builds, Helm chart extraction, and ArgoCD deployments, cutting release effort by 70%.",
+        "Developed Bash scripts to automate CI/CD workflows including branch creation, Jenkins build triggering, library version updates, build tag & Helm chart extraction, branch cleanup, and ArgoCD deployments, reducing manual effort by 70% and saving several hours during each release cycle.",
       ],
     },
   ];
