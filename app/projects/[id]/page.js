@@ -6,86 +6,128 @@ const projectsData = [
   {
     id: 1,
     imageUrl: "portfolio-1.jpg",
-    category: "AI AGENT",
+    category: "Agentic AI",
     title: "Multi-Agent AI Release Notes Generator",
     description:
       "Built an AI-driven agent integrating Confluence, Jira, and GitHub custom agents to automate feature release note creation, reducing effort by 95%.",
     fullDescription: `Engineered a multi-agent AI system integrating Confluence, Jira, and GitHub to automate feature release documentation. The agents analyze requirements, documentation, and customer value to generate React UI code, create GitHub pull requests, and produce context-aware release notes.
 
 Key Features:
-- Automated extraction of release information from Jira and GitHub
-- Integration with Confluence for documentation management
-- Custom AI agents for intelligent content generation
-- 95% reduction in manual effort for release note creation
-- Real-time processing and updates
+- Multi-agent AI workflow with specialized GitHub and Jira agents
+- Automated retrieval of context from Jira epics, Confluence pages, and GitHub repositories
+- AI-powered analysis of feature requirements and customer value
+- Automated React UI code generation and GitHub pull request creation
+- Context-aware release note generation from engineering artifacts
+- Reduced manual engineering effort by ~95% through workflow automation
 
-Technologies Used: React.js, TypeScript, GitHub Copilot, Atlassian Rovo, Jira, Confluence`,
-    technologies: ["React.js", "TypeScript", "GitHub Copilot", "Atlassian Rovo", "Jira", "Confluence"],
+Technologies Used: React.js, TypeScript, GitHub MCP, Atlassian MCP, LLMs, Go, Jira, Confluence`,
+    technologies: ["React.js", "TypeScript", "GitHub MCP", "Atlassian MCP", "LLMs", "Go", "Jira", "Confluence"],
     link: "#",
-    challenge: "Automating the time-consuming process of creating release notes while ensuring accuracy and consistency across different platforms.",
-    solution: "Developed a unified AI agent that pulls data from multiple sources and generates cohesive, professional release notes automatically.",
-    impact: "95% reduction in manual effort, faster release cycles, and improved documentation consistency.",
+    challenge: "Engineering teams spend significant time translating Jira requirements and Confluence documentation into code changes, pull requests, release notes, and documentation updates, resulting in repetitive manual effort and slower feature delivery.",
+    solution: "Developed a multi-agent AI system that leverages GitHub, Jira, and Confluence context to understand requirements, identify customer value, generate React UI code, create GitHub pull requests, and automatically produce release documentation.",
+    impact: "Reduced manual effort by ~95%, shortened feature implementation cycles, and standardized release documentation through AI-driven workflow automation.",
   },
   {
     id: 2,
     imageUrl: "portfolio-2.jpg",
     category: "AI AGENT",
-    title: "Figma-UI-Generator Agent",
+    title: "AI-Powered Figma-to-Code Agent",
     description:
       "Built an AI-powered Figma-to-code agent achieving 80% code generation accuracy, reducing UI development effort by 60-70%.",
     fullDescription: `A powerful AI agent that transforms Figma designs directly into production-ready React code. This agent bridges the gap between design and development by automatically generating components with high accuracy.
 
 Key Features:
 - 80% code generation accuracy from Figma designs
-- Automatic component creation in React/TypeScript
-- Design system integration and component mapping
-- Support for responsive layouts and Tailwind CSS
-- 60-70% reduction in UI development time
+- Generates a complete page scaffold (TSX, SCSS, i18n, tests, RTK Query slice) from a single Figma design URL
+- Automatically maps every Figma component to the correct snow-react-ds Design System component using Code Connect snippets
+- Produces dual-cloud API hooks for both Azure and AWS environments with automatic feature flag switching
+- Runs lint and unit tests after generation and fixes all failures before writing the final commit
+- Creates a feature branch, commits all generated files, and opens a draft PR against develop without any manual Git steps
 
-Technologies Used: Figma MCP, React.js, TypeScript, Figma Code Connect, GHCP`,
-    technologies: ["Figma MCP", "React.js", "TypeScript", "Figma Code Connect", "GHCP"],
+Technologies Used: Figma MCP, Figma Code Connect, React.js, TypeScript, SCSS, Redux Toolkit, RTK Query, GitHub MCP`,
+    technologies: ["Figma MCP", "Figma Code Connect", "React.js", "TypeScript", "SCSS", "Redux Toolkit", "RTK Query", "GitHub MCP"],
     link: "#",
-    challenge: "Converting visual design components into clean, maintainable code while preserving design intent and ensuring consistency.",
-    solution: "Implemented an intelligent pattern recognition system that identifies design elements and generates corresponding React components with proper styling.",
-    impact: "60-70% faster UI development, improved design-to-code consistency, reduced rework and revisions.",
+    challenge: "Automating the conversion of complex Figma designs into production-ready frontend code while maintaining design system compliance, scalability, and code quality.",
+    solution: "Built an AI-powered design-to-code pipeline that transforms Figma designs into production-ready React applications by combining Figma MCP, Code Connect, automated code generation, validation, and GitHub workflow automation.",
+    impact: "Achieved ~80% code generation accuracy, reduced frontend development effort by 60–70%, minimized repetitive coding tasks, and accelerated design-to-development workflows.",
   },
   {
-    id: 3,
-    imageUrl: "portfolio-3.jpg",
-    category: "DEEP LEARNING",
-    title: "Redefining Dental Radiology using Deep Learning",
-    description:
-      "Contributed to an IEEE-published Deep Learning research project using YOLOv7/YOLOv8 for AI-driven image detection and diagnostic analysis.",
-    fullDescription: `A cutting-edge research project that applies advanced deep learning techniques to dental radiography. This work was published in IEEE and presented at international conferences.
+  id: 3,
+  imageUrl: "portfolio-3.jpg",
+  category: "DEEP LEARNING",
+  title: "Redefining Dental Radiology using Deep Learning",
+  description:
+    "Contributed to an IEEE-published deep learning research project leveraging YOLOv7 and YOLOv8 for automated dental disease detection from panoramic radiographs.",
+  fullDescription: `Developed and evaluated deep learning models for automated dental disease detection using panoramic dental X-rays (OPGs). The project involved dataset preparation, annotation, model training, and performance evaluation using state-of-the-art YOLO architectures. The research was published in IEEE and presented at the 2nd World Conference on Communication & Computing (WCONF 2024).
 
 Key Features:
-- YOLOv7 and YOLOv8 object detection models
-- Dental anomaly detection and classification
-- High accuracy in identifying dental conditions from X-rays
-- Real-time diagnostic analysis
-- Clinical validation and testing
+- Automated object detection of multiple dental conditions from panoramic radiographs (OPGs)
+- Dataset preparation, annotation, augmentation, and preprocessing for robust model training
+- Comparative evaluation of YOLOv7 and YOLOv8 object detection models
+- Performance analysis using standard object detection evaluation metrics
+- Research published in IEEE and presented at WCONF 2024
 
-Technologies Used: YOLOv7, YOLOv8, Python, Roboflow, Jupyter, PyTorch`,
-    technologies: ["YOLOv7", "YOLOv8", "Python", "Roboflow", "Jupyter", "PyTorch"],
-    link: "#",
-    challenge: "Creating accurate AI models for detecting and classifying dental conditions in radiographic images for clinical use.",
-    solution: "Trained and optimized YOLO models on a curated dataset of dental X-rays with expert annotation and validation.",
-    impact: "IEEE publication, presentation at 2nd World Conference on Communication & Computing (WCONF), improved diagnostic accuracy.",
-  },
+Technologies Used: Python, PyTorch, YOLOv7, YOLOv8, Roboflow, OpenCV, Jupyter Notebook`,
+  technologies: [
+    "Python",
+    "PyTorch",
+    "YOLOv7",
+    "YOLOv8",
+    "Roboflow",
+    "OpenCV",
+    "Jupyter Notebook"
+  ],
+
+  link: "#",
+
+  challenge:
+    "Developing a reliable deep learning pipeline capable of detecting multiple dental conditions from panoramic dental X-rays while handling limited annotated medical imaging data.",
+
+  solution:
+    "Prepared and annotated a dental radiograph dataset, trained and evaluated YOLOv7 and YOLOv8 models, and compared their detection performance for automated dental disease identification.",
+
+  impact:
+    "Published in IEEE and presented at the 2nd World Conference on Communication & Computing (WCONF 2024), demonstrating the application of deep learning for automated dental image analysis."
+},
   {
-    id: 4,
-    imageUrl: "portfolio-4.jpg",
-    category: "WEB DESIGN",
-    title: "Corporate Website",
-    description:
-      "Modern responsive website for a tech company featuring dynamic content, SEO optimization, and lead generation.",
-    fullDescription: `A comprehensive corporate website designed and built to showcase company services and generate qualified leads.`,
-    technologies: ["Next.js", "React", "Tailwind CSS", "SEO"],
-    link: "#",
-    challenge: "Creating an engaging, fast-loading website that converts visitors into leads.",
-    solution: "Built with Next.js for optimal performance and SEO, with strategic content placement and CTAs.",
-    impact: "Improved lead generation and brand visibility.",
-  },
+  id: 4,
+  imageUrl: "portfolio-4.jpg",
+  category: "IoT",
+  title: "Smart RFID-Based Pet Feeder",
+  description:
+    "Designed and developed an IoT-enabled automated pet feeding system using ESP32 and RFID technology for secure, hands-free pet identification and food dispensing.",
+
+  fullDescription: `Built an IoT-powered smart pet feeder that automatically dispenses food when an authorized pet wearing an RFID-enabled collar approaches the device. The project combines embedded systems, RFID authentication, and real-time hardware control to provide a reliable, contactless feeding solution.
+
+Key Features:
+- RFID-based pet identification using a collar-mounted RFID tag
+- ESP32-powered embedded system for real-time device control
+- Automated food dispensing through a servo motor upon successful authentication
+- Contactless and secure feeding mechanism to prevent unauthorized access
+- Modular architecture with support for future enhancements such as scheduled feeding and IoT monitoring
+
+Technologies Used: ESP32, RFID (MFRC522), Arduino IDE, C++, Servo Motor, Embedded Systems`,
+
+  technologies: [
+    "ESP32",
+    "RFID (MFRC522)",
+    "Arduino IDE",
+    "C++",
+    "Servo Motor",
+    "Embedded Systems"
+  ],
+
+  link: "#",
+
+  challenge:
+    "Designing a reliable embedded system capable of accurately identifying an authorized pet and dispensing food automatically while preventing false activations and ensuring consistent hardware performance.",
+
+  solution:
+    "Integrated an ESP32 microcontroller with an RFID reader and servo-controlled dispensing mechanism to authenticate pets in real time and automate the feeding process.",
+
+  impact:
+    "Demonstrated the practical application of IoT and embedded systems to automate pet care through secure RFID-based authentication and real-time hardware control."
+},
   {
     id: 5,
     imageUrl: "portfolio-5.jpg",
@@ -223,13 +265,13 @@ export default async function ProjectDetail({ params }) {
               {previousProject ? (
                 <Link
                   href={`/projects/${previousProject.id}`}
-                  className="group p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition"
+                  className="group block p-6 bg-gray-50 rounded-lg no-underline hover:bg-gray-100 transition"
                 >
-                  <div className="flex items-center gap-3 text-primary-500 font-semibold mb-2">
+                  <div className="mb-2 flex items-center gap-3 font-semibold text-primary-500 no-underline">
                     <ArrowLeftIcon className="size-5" />
                     Previous Project
                   </div>
-                  <h4 className="text-lg font-semibold text-gray-900 group-hover:text-primary-500">
+                  <h4 className="text-lg font-semibold text-gray-900 no-underline group-hover:text-primary-500">
                     {previousProject.title}
                   </h4>
                 </Link>
@@ -240,13 +282,13 @@ export default async function ProjectDetail({ params }) {
               {nextProject ? (
                 <Link
                   href={`/projects/${nextProject.id}`}
-                  className="group p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition text-right"
+                  className="group block p-6 bg-gray-50 rounded-lg text-right no-underline hover:bg-gray-100 transition"
                 >
-                  <div className="flex items-center justify-end gap-3 text-primary-500 font-semibold mb-2">
+                  <div className="mb-2 flex items-center justify-end gap-3 font-semibold text-primary-500 no-underline">
                     Next Project
                     <ArrowRightIcon className="size-5" />
                   </div>
-                  <h4 className="text-lg font-semibold text-gray-900 group-hover:text-primary-500">
+                  <h4 className="text-lg font-semibold text-gray-900 no-underline group-hover:text-primary-500">
                     {nextProject.title}
                   </h4>
                 </Link>
