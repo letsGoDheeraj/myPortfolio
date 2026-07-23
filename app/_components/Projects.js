@@ -6,18 +6,18 @@ export default function Projects() {
   const projectsData = [
     {
       id: 1,
-      imageUrl: "portfolio-1.jpg",
-      category: "AI AGENT",
-      title: "Automated News Post Creation Agent",
+      imageUrl: "portfolio-1.png",
+      category: "Agentic AI",
+      title: "Multi-Agent AI Release Notes Generator",
       description:
         "Built an AI-driven agent integrating Confluence, Jira, and GitHub custom agents to automate feature release note creation, reducing effort by 95%.",
       link: "#",
     },
     {
       id: 2,
-      imageUrl: "portfolio-2.jpg",
+      imageUrl: "portfolio-2.png",
       category: "AI AGENT",
-      title: "Figma-UI-Generator Agent",
+      title: "AI-Powered Figma-to-Code Agent",
       description:
         "Built an AI-powered Figma-to-code agent achieving 80% code generation accuracy, reducing UI development effort by 60-70%.",
       link: "#",
@@ -28,34 +28,34 @@ export default function Projects() {
       category: "DEEP LEARNING",
       title: "Redefining Dental Radiology using Deep Learning",
       description:
-        "Contributed to an IEEE-published Deep Learning research project using YOLOv7/YOLOv8 for AI-driven image detection and diagnostic analysis.",
+        "Contributed to an IEEE-published deep learning research project leveraging YOLOv7 and YOLOv8 for automated dental disease detection from panoramic radiographs.",
       link: "#",
     },
     {
       id: 4,
       imageUrl: "portfolio-4.jpg",
-      category: "WEB DESIGN",
-      title: "Corporate Website",
+      category: "IoT",
+      title: "Smart RFID-Based Pet Feeder",
       description:
-        "Modern responsive website for a tech company featuring dynamic content, SEO optimization, and lead generation.",
+        "Designed and developed an IoT-enabled automated pet feeding system using ESP32 and RFID technology for secure, hands-free pet identification and food dispensing.",
       link: "#",
     },
     {
       id: 5,
       imageUrl: "portfolio-5.jpg",
-      category: "BACKEND",
-      title: "Analytics API",
+      category: "SYSTEM DESIGN",
+      title: "Multi-Purchase & Tier Handling System Design",
       description:
-        "Scalable API backend for processing and analyzing large datasets with advanced filtering and reporting capabilities.",
+        "Designed a comprehensive system for handling multiple asset purchases with different tiers and terms, enabling organizations to accurately track varied acquisition costs and compliance.",
       link: "#",
     },
     {
       id: 6,
-      imageUrl: "portfolio-6.jpg",
-      category: "UI-UX DESIGN",
-      title: "Customer Portal",
+      imageUrl: "portfolio-7.jpg",
+      category: "FULL STACK",
+      title: "Picto – Personal Portfolio Platform",
       description:
-        "User-friendly customer portal with self-service options, support tickets, and personalized dashboards.",
+        "Engineered a modern, SEO-optimized portfolio platform to showcase projects, experience, certifications, and technical expertise through an interactive, high-performance user experience.",
       link: "#",
     },
   ];

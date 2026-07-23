@@ -153,14 +153,6 @@ export default function Home() {
             </p>
           </div>
           <Projects />
-          <div className="mt-12 text-center">
-            <Link
-              href="/projects"
-              className="p-button bg-primary-500 hover:bg-primary-600 border-primary-500 hover:border-primary-600 font-bold no-underline"
-            >
-              View All Projects
-            </Link>
-          </div>
         </div>
       </div>
 
@@ -172,7 +164,7 @@ export default function Home() {
           <div className="text-gray-400 text-center text-lg lg:w-1/2 mx-auto">
             <p>
               A collection of professional certifications that validate my expertise
-              across cloud platforms, development practices, and technology domains.
+              across technology domains.
             </p>
           </div>
           <Certifications />

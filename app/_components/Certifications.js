@@ -12,21 +12,20 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 const certificationsData = [
   {
     id: 1,
-    image: "mongodb-intro.png",           // public/certs/mongodb-intro.png
-    title: "Introduction to MongoDB",
-    issuer: "MongoDB Inc. / Coursera",
-    date: "Apr 6, 2024",
-    credentialUrl: "https://coursera.org/verify/29MFDE6ZGNAH",
+    image: "projectManagementCertification.png",
+    title: "Project Management & Other Tools for Career Development",
+    issuer: "University of California, Irvine / Coursera",
+    date: "Sep 18, 2023",
+    credentialUrl: "https://coursera.org/verify/specialization/NCEEEGRQMKRU",
   },
-  // Add more certificates below:
-  // {
-  //   id: 2,
-  //   image: "aws-saa.png",
-  //   title: "AWS Certified Solutions Architect",
-  //   issuer: "Amazon Web Services",
-  //   date: "2024",
-  //   credentialUrl: "https://...",
-  // },
+  {
+    id: 2,
+    image: "cybersecurityCertification.png",
+    title: "IBM Cybersecurity Analyst",
+    issuer: "IBM / Coursera",
+    date: "Sep 30, 2023",
+    credentialUrl: "https://coursera.org/verify/professional-cert/8NDFY62MY9XT",
+  },
 ];
 
 export default function Certifications() {

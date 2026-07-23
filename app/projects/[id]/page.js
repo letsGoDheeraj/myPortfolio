@@ -5,7 +5,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 const projectsData = [
   {
     id: 1,
-    imageUrl: "portfolio-1.jpg",
+    imageUrl: "portfolio-1.png",
     category: "Agentic AI",
     title: "Multi-Agent AI Release Notes Generator",
     description:
@@ -29,7 +29,7 @@ Technologies Used: React.js, TypeScript, GitHub MCP, Atlassian MCP, LLMs, Go, Ji
   },
   {
     id: 2,
-    imageUrl: "portfolio-2.jpg",
+    imageUrl: "portfolio-2.png",
     category: "AI AGENT",
     title: "AI-Powered Figma-to-Code Agent",
     description:
@@ -131,31 +131,75 @@ Technologies Used: ESP32, RFID (MFRC522), Arduino IDE, C++, Servo Motor, Embedde
   {
     id: 5,
     imageUrl: "portfolio-5.jpg",
-    category: "BACKEND",
-    title: "Analytics API",
+    category: "SYSTEM DESIGN",
+    title: "Multi-Purchase & Tier Handling System Design",
     description:
-      "Scalable API backend for processing and analyzing large datasets with advanced filtering and reporting capabilities.",
-    fullDescription: `A robust backend API designed to handle large-scale data analytics requests with high performance and reliability.`,
-    technologies: ["Node.js", "Express", "PostgreSQL", "Redis"],
+      "Designed a comprehensive system for handling multiple asset purchases with different tiers and terms, enabling organizations to accurately track varied acquisition costs and compliance across complex purchasing scenarios.",
+    fullDescription: `Authored a detailed design specification for an enterprise asset management system to handle multi-purchase scenarios and flexible tier management. This addresses the critical business need where organizations acquire the same asset multiple times at different costs and time periods, requiring complex tracking and allocation strategies.
+
+Key Features:
+- Multi-purchase asset tracking with support for different acquisition dates and pricing tiers
+- Flexible term management accommodating varying start and end dates per purchase instance
+- Accurate cost allocation and distribution across different purchase scenarios
+- Tier-based handling for complex multi-level asset management
+- Comprehensive system architecture and relational data model design
+- Cross-functional team collaboration on implementation strategy and technical constraints
+- Detailed specification documentation covering business requirements and technical specifications
+
+Technologies Used: System Design, Database Architecture, Enterprise Software Architecture, Asset Management Systems`,
+    technologies: ["System Design", "Database Architecture", "Enterprise Architecture", "Asset Management", "Data Modeling"],
     link: "#",
-    challenge: "Processing millions of data points efficiently while providing real-time analytics.",
-    solution: "Implemented caching strategies and optimized database queries for high-performance data retrieval.",
-    impact: "Supported millions of daily requests with sub-second response times.",
+    challenge: "Enterprise systems historically track only a single set of terms per asset type, but organizations often purchase the same assets multiple times at varying prices and periods, requiring accurate cost allocation and compliance tracking across all purchase instances.",
+    solution: "Designed a scalable system architecture enabling flexible multi-purchase tracking, tiered asset handling, and varied term management within a unified asset management platform.",
+    impact: "Enabled accurate asset cost tracking across multiple purchase instances, improved compliance visibility, and optimized procurement spending through detailed cost allocation and reporting.",
   },
   {
-    id: 6,
-    imageUrl: "portfolio-6.jpg",
-    category: "UI-UX DESIGN",
-    title: "Customer Portal",
-    description:
-      "User-friendly customer portal with self-service options, support tickets, and personalized dashboards.",
-    fullDescription: `An intuitive customer portal that empowers users to manage their accounts and resolve issues independently.`,
-    technologies: ["React", "Tailwind CSS", "Next.js", "Firebase"],
-    link: "#",
-    challenge: "Creating a user-friendly interface that reduces support tickets while improving customer satisfaction.",
-    solution: "Designed with user research and iterative testing to create an intuitive self-service experience.",
-    impact: "30% reduction in support tickets, improved customer satisfaction scores.",
-  },
+  id: 6,
+  imageUrl: "portfolio-7.jpg",
+  category: "FULL STACK",
+  title: "Picto – Personal Portfolio Platform",
+  description:
+    "Engineered a modern, SEO-optimized portfolio platform to showcase projects, experience, certifications, and technical expertise through an interactive, high-performance user experience.",
+
+  fullDescription: `Picto is a production-ready portfolio platform built to showcase my professional journey, software engineering experience, AI projects, certifications, and technical expertise. Designed with a strong emphasis on performance, accessibility, scalability, and user experience, the platform provides recruiters and collaborators with an engaging way to explore my work.
+
+Key Features:
+- Modern responsive UI optimized for desktop, tablet, and mobile devices
+- Dynamic project showcase with detailed case studies, technology stacks, and impact metrics
+- Interactive career timeline highlighting professional experience and achievements
+- Skills, certifications, and achievements organized with reusable UI components
+- Smooth page transitions and animations for an engaging user experience
+- Contact form with email integration for direct communication
+- SEO optimization using metadata, Open Graph tags, sitemap.xml, robots.txt, and structured routing
+- Performance optimization through image optimization, lazy loading, code splitting, and server-side rendering
+- Reusable component architecture for maintainability and scalability
+- Dark and light theme support with persistent user preferences
+
+Technologies Used: Next.js, React.js, TypeScript, Tailwind CSS, Framer Motion, Node.js, EmailJS, Vercel, ESLint`,
+
+  technologies: [
+    "Next.js",
+    "React.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Node.js",
+    "EmailJS",
+    "Vercel",
+    "ESLint"
+  ],
+
+  link: "#",
+
+  challenge:
+    "Building a professional portfolio that effectively communicates technical expertise while delivering exceptional performance, responsiveness, accessibility, and search engine visibility.",
+
+  solution:
+    "Architected a scalable Next.js application with reusable React components, TypeScript, optimized rendering, modern UI animations, SEO best practices, and a modular design system for easy content management.",
+
+  impact:
+    "Established a professional digital presence that showcases software engineering expertise through interactive project case studies, fast page loads, responsive design, excellent SEO, and an intuitive user experience."
+}
 ];
 
 export function generateStaticParams() {
@@ -220,7 +264,7 @@ export default async function ProjectDetail({ params }) {
               <Image
                 src={`/portfolio/${project.imageUrl}`}
                 fill
-                className="object-cover"
+                className="object-contain"
                 alt={project.title}
                 priority
               />
