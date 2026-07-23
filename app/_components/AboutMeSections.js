@@ -27,6 +27,12 @@ const aboutMeData = [
     text: "Music has always been a big part of my life—there's rarely a day that goes by without it. My favorites include Mariah Carey, Ariana Grande, Taylor Swift, Olivia Rodrigo, and many others. Their music has helped me navigate challenges, build confidence, and find a sense of belonging, while bringing joy to my everyday life.",
     image: "", // add image if desired
   },
+  {
+    id: 5,
+    title: "Modelling",
+    text: "I'm passionate about modelling and enjoy expressing myself through fashion and visual storytelling. Modelling allows me to explore creativity beyond tech, collaborate with talented photographers and designers, and embrace my authenticity. The pictures you see here are me showcasing different styles and perspectives. The photos featured here showcase some of my favorite shoots, and you can explore more on my Instagram that is linked below.",
+    image: "", // add image if desired
+  },
 ];
 
 export default function AboutMeSections() {

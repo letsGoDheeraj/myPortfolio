@@ -2,7 +2,6 @@ import Image from "next/image";
 import profle from "@/public/profile.png";
 import Link from "next/link";
 
-import ContactForm from "./_components/ContactForm";
 import Projects from "./_components/Projects";
 import Certifications from "./_components/Certifications";
 import AboutMeSections from "./_components/AboutMeSections";
@@ -188,7 +187,7 @@ export default function Home() {
 
       <div className="container mx-auto" id="contact">
         <div className="p-8 lg:p-20 bg-white rounded-2xl shadow-[0_59px_124px_0_rgba(0,0,0,0.12)] relative z-10 -mb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-32 items-center">
+          <div className="flex flex-col items-start">
             <div>
               <h3 className="text-gray-900 text-4xl font-semibold">
                 Let&apos;s connect
@@ -205,7 +204,7 @@ export default function Home() {
                   <div>
                     <div className="text-gray-700 text-sm">Address:</div>
                     <div className="text-gray-900 font-medium mt-1">
-                      New Mexico 31134
+                      GF-01, Bhoomi Value Homes, Nagarbhavi Circle, Bangalore-560072, Karnataka, India
                     </div>
                   </div>
                 </div>
@@ -216,7 +215,7 @@ export default function Home() {
                   <div>
                     <div className="text-gray-700 text-sm">My Email:</div>
                     <div className="text-gray-900 font-medium mt-1">
-                      khurram.pk@hotmail.com
+                      12dheerajrp@gmail.com
                     </div>
                   </div>
                 </div>
@@ -227,51 +226,36 @@ export default function Home() {
                   <div>
                     <div className="text-gray-700 text-sm">Call Me Now:</div>
                     <div className="text-gray-900 font-medium mt-1">
-                      00-1234 00000
+                      +91 9620244883
                     </div>
                   </div>
                 </div>
               </div>
               <div className="flex gap-1 mt-8">
                 <Link
-                  href="#"
+                  href="https://www.linkedin.com/in/dheeraj-r-p-b30465218"
                   className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500"
-                >
-                  <i className="pi pi-facebook group-hover:text-white text-primary-500  text-2xl leading-none"></i>
-                </Link>
-                <Link
-                  href="#"
-                  className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500 "
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="pi pi-linkedin group-hover:text-white text-primary-500  text-2xl leading-none"></i>
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.instagram.com/the_raj.1212"
                   className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500 "
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="pi pi-instagram group-hover:text-white text-primary-500  text-2xl leading-none"></i>
                 </Link>
                 <Link
-                  href="#"
+                  href="https://github.com/letsGoDheeraj"
                   className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500 "
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <i className="pi pi-twitter group-hover:text-white text-primary-500  text-2xl leading-none"></i>
+                  <i className="pi pi-github group-hover:text-white text-primary-500  text-2xl leading-none"></i>
                 </Link>
-                <Link
-                  href="#"
-                  className="flex justify-center items-center p-3 no-underline rounded group hover:bg-primary-500 "
-                >
-                  <i className="pi pi-pinterest group-hover:text-white text-primary-500  text-2xl leading-none"></i>
-                </Link>
-              </div>
-            </div>
-            <div>
-              <div className="text-gray-400 text-lg">
-                There are many variations of passages of Lorem Ipsu available,
-                but the majority have suffered alte.
-              </div>
-              <div className="mt-10">
-                <ContactForm />
               </div>
             </div>
           </div>
