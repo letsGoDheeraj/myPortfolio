@@ -7,31 +7,31 @@ const aboutMeData = [
     id: 1,
     title: "Proud Gay Man & LGBTQ+ Ally",
     text: "I'm a proud gay man who believes diversity, inclusion, and authenticity make both teams and communities stronger. I strive to foster environments where everyone feels respected, valued, and empowered to be themselves, both in technology and beyond.",
-    image: "", // add image if desired
+    image: "prideFlag.webp", // add image if desired
   },
   {
     id: 2,
     title: "Cat Lover",
     text: "I'm a proud cat dad to Leo and Ash—the two curious faces you'll spot in the photo. They bring plenty of joy, calm, and the occasional chaos into my life. Spending time with them is my favorite way to unwind after a long day of coding and come back with a fresh perspective.",
-    image: "cat-lover.jpg", // public/about/cat-lover.jpg
+    image: "pets.jpeg", // public/about/cat-lover.jpg
   },
   {
     id: 3,
     title: "Gardening Enthusiast",
     text: "Beyond software, I enjoy gardening and growing exotic flowers. Watching plants grow from seed to bloom is both relaxing and rewarding. Much like building software, gardening requires patience, attention to detail, and continuous care. The flowers you see here are ones I've grown myself.",
-    image: "gardening.jpg", // public/about/gardening.jpg
+    image: "flowers.jpeg", // public/about/gardening.jpg
   },
   {
     id: 4,
     title: "Music Lover",
     text: "Music has always been a big part of my life—there's rarely a day that goes by without it. My favorites include Mariah Carey, Ariana Grande, Taylor Swift, Olivia Rodrigo, and many others. Their music has helped me navigate challenges, build confidence, and find a sense of belonging, while bringing joy to my everyday life.",
-    image: "", // add image if desired
+    image: "albums.jpeg", // add image if desired
   },
   {
     id: 5,
     title: "Modelling",
     text: "I'm passionate about modelling and enjoy expressing myself through fashion and visual storytelling. Modelling allows me to explore creativity beyond tech, collaborate with talented photographers and designers, and embrace my authenticity. The pictures you see here are me showcasing different styles and perspectives. The photos featured here showcase some of my favorite shoots, and you can explore more on my Instagram that is linked below.",
-    image: "", // add image if desired
+    image: "modelling.jpeg", // add image if desired
   },
 ];
 

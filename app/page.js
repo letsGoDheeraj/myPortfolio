@@ -20,7 +20,7 @@ export default function Home() {
       responsibilities: [
         "Built and enhanced SaaS connectors for 10+ enterprise SaaS vendors, including Microsoft 365, ServiceNow, Microsoft Entra ID, Salesforce, and DocuSign, enabling automated ingestion of subscription, usage, and user data for enterprise tenants with 100K+ users",
         "Designed and developed a multi-purchase subscription and tier management system with RESTful APIs, currency conversion, and event-driven processing using Go, MongoDB, NATS, and OpenAPI.",
-        "Implemented certificate-based authentication for Microsoft 365, Microsoft Entra ID, and Microsoft Defender connectors, enabling secure, keyless authentication for enterprise integrations.",
+        "Implemented certificate-based authentication for Microsoft 365, Microsoft Entra ID, and Microsoft Defender connectors, enabling secure authentication for enterprise customers.",
         "Diagnosed and resolved critical production incidents by performing root cause analysis, fixing large-scale data ingestion failures, correcting subscription count discrepancies, remediating PII exposure in API queries, and implementing resilient retry mechanisms for transient API failures.",
       ],
     },
